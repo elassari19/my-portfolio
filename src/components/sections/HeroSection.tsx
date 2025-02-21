@@ -4,6 +4,12 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Meteors } from '../magicui/meteors';
 import SectionA from './hero-sections/section-a';
+import ivf from '../../../public/ivf.png';
+import vocable from '../../../public/vocable.png';
+import hunter from '../../../public/hunter.png';
+import commerce from '../../../public/commerce.png';
+import vacancy from '../../../public/vacancy.png';
+import ProjectCard from '../shared/ProjectCard';
 
 function HeroSection() {
   const { scrollYProgress } = useScroll();
@@ -13,15 +19,53 @@ function HeroSection() {
       text: <SectionA />,
       initialZ: 0,
     },
-    { text: <h2>I'm Hicham, a Full Stack Developer</h2>, initialZ: 2500 },
     {
-      text: <h3>With a Passion for Crafting Digital Experiences</h3>,
-      initialZ: 5000,
+      text: (
+        <ProjectCard src={ivf} name="IVF Chat" description="AI Chat - 2025" />
+      ),
+      initialZ: 0,
     },
-    { text: <h3> and a Love for Clean and Efficient Code</h3>, initialZ: 7500 },
     {
-      text: <h3 className="">I have Experience to use AI fro development</h3>,
-      initialZ: 10000,
+      text: (
+        <ProjectCard
+          src={vocable}
+          name="Vocable AI"
+          description="Marketing AI - 2025"
+          reverse
+        />
+      ),
+      initialZ: 0,
+    },
+    {
+      text: (
+        <ProjectCard
+          src={hunter}
+          name="Hunter Galloway"
+          description="Find Home - 2024"
+        />
+      ),
+      initialZ: 0,
+    },
+    {
+      text: (
+        <ProjectCard
+          src={commerce}
+          name="E-Commerce App"
+          description="E-Commerce - 2024"
+          reverse
+        />
+      ),
+      initialZ: 0,
+    },
+    {
+      text: (
+        <ProjectCard
+          src={vacancy}
+          name="Ton Vacancy"
+          description="Vacancy - 2022"
+        />
+      ),
+      initialZ: 0,
     },
   ];
 
@@ -38,13 +82,13 @@ function HeroSection() {
           const scale = useTransform(
             scrollYProgress,
             [index * 0.15, (index + 1) * 0.15],
-            [1, 2]
+            [1, 2.5]
           );
 
           const opacity = useTransform(
             scrollYProgress,
             [index * 0.15, index * 0.15 + 0.07, (index + 1) * 0.15],
-            [0.05, 1, 0]
+            [0.05, 2, 0]
           );
 
           const blur = useTransform(
