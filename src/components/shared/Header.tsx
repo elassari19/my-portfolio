@@ -7,39 +7,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { ShineBorder } from '../magicui/shine-border';
-
-const menuItems = [
-  {
-    icon: '🏠',
-    title: 'Home',
-    description: 'Welcome to my forever work-in-progress!',
-    href: '/',
-  },
-  {
-    icon: '📂',
-    title: 'Work',
-    description: 'Showcase of my work',
-    href: '/wrork',
-  },
-  {
-    icon: '👤',
-    title: 'About',
-    description: 'Learn more about me!',
-    href: '/about',
-  },
-  {
-    icon: '📚',
-    title: 'Blog',
-    description: 'Thoughts, mental models, and tutorials',
-    href: '/blog',
-  },
-  {
-    icon: '🔗',
-    title: 'Links',
-    description: 'All my links are here',
-    href: '/links',
-  },
-];
+import { menuItems } from '../../lib/constants';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
