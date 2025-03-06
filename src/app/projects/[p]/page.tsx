@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { BookOpenIcon, GithubIcon } from 'lucide-react';
 import TechnologyIcon from '@/components/shared/technology-icon';
 import { Button } from '../../../components/ui/button';
+import ShowcaseCarousel from '../../../components/shared/ShowcaseCarousel';
 
 interface PageProps {
   params: Promise<{ p: string }>;
@@ -38,7 +39,8 @@ export default async function ProjectPage({ params }: PageProps) {
           </p>
         </div>
 
-        <div className="flex justify-center items-center gap-4">
+        {/* Project Tags */}
+        <div className="flex flex-wrap justify-center items-center gap-1 md:gap-4">
           {project.tags.map((tag: string) => (
             <Button key={tag} variant="outline">
               {tag}
@@ -47,14 +49,8 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
 
         {/* Project Image */}
-        <div className="relative aspect-video rounded-lg overflow-hidden mt-8">
-          <Image
-            src={project.src}
-            alt={project.name}
-            className="object-cover"
-            fill
-            priority
-          />
+        <div className="relative aspect-video rounded-lg overflow-hidden mt-8 shadow-2xl">
+          <ShowcaseCarousel images={[project.src, ...project.showcase!]} />
         </div>
 
         {/* Links */}

@@ -6,6 +6,13 @@ import vocable from '../../public/vocable.png';
 import atoms from '../../public/atoms.png';
 import nanoplot from '../../public/nanoplot.png';
 import school from '../../public/school.png';
+import v1 from '../../public/v-1.png';
+import v2 from '../../public/v-2.png';
+import v3 from '../../public/v-3.png';
+import v4 from '../../public/v-4.png';
+import v5 from '../../public/v-5.png';
+import v6 from '../../public/v-6.png';
+import v7 from '../../public/v-7.png';
 
 export const menuItems = [
   {
@@ -109,6 +116,7 @@ export const projects = [
   {
     href: '/projects/vocable',
     src: vocable,
+    showcase: [v1, v2, v3, v4, v5, v6, v7],
     github: 'https://github.com/Vocable-AI/vocable_frontend',
     live: 'https://vocable.ai/',
     name: 'Vocable AI',
