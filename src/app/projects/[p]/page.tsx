@@ -34,7 +34,7 @@ export default async function ProjectPage({ params }: PageProps) {
           <h1 className="text-4xl md:text-5xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
             {project.name}
           </h1>
-          <p className="font-semibold text-lg text-gray-600 dark:text-gray-400 px-2 md:px-6">
+          <p className="font-semibold text-lg text-gray-600 dark:text-gray-400 px-0 md:px-6">
             {project.description}
           </p>
         </div>
@@ -49,7 +49,7 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
 
         {/* Project Image */}
-        <div className="relative aspect-video rounded-lg overflow-hidden mt-8 shadow-2xl">
+        <div className="relative aspect-video rounded-lg overflow-hidden mt-8 shadow-2xl transform transition duration-300 hover:scale-125 z-50">
           <ShowcaseCarousel images={[project.src, ...project.showcase!]} />
         </div>
 

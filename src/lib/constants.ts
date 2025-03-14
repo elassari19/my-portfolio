@@ -13,6 +13,53 @@ import v4 from '../../public/v-4.png';
 import v5 from '../../public/v-5.png';
 import v6 from '../../public/v-6.png';
 import v7 from '../../public/v-7.png';
+import h1 from '../../public/h-1.png';
+import h2 from '../../public/h-2.png';
+import h3 from '../../public/h-3.png';
+import h4 from '../../public/h-4.png';
+import h5 from '../../public/h-5.png';
+import h6 from '../../public/h-6.png';
+import h7 from '../../public/h-7.png';
+import e1 from '../../public/e-1.png';
+import e2 from '../../public/e-2.png';
+import e3 from '../../public/e-3.png';
+import e4 from '../../public/e-4.png';
+import e5 from '../../public/e-5.png';
+import e6 from '../../public/e-6.png';
+import e7 from '../../public/e-7.png';
+import t1 from '../../public/t-1.png';
+import t2 from '../../public/t-2.png';
+import t3 from '../../public/t-3.png';
+import t4 from '../../public/t-4.png';
+import t5 from '../../public/t-5.png';
+import t6 from '../../public/t-6.png';
+import t7 from '../../public/t-7.png';
+import n1 from '../../public/n-1.png';
+import n2 from '../../public/n-2.png';
+import n3 from '../../public/n-3.png';
+import n4 from '../../public/n-4.png';
+import n5 from '../../public/n-5.png';
+import n6 from '../../public/n-6.png';
+import n7 from '../../public/n-7.png';
+import i1 from '../../public/v-1.png';
+import i2 from '../../public/v-2.png';
+import i3 from '../../public/v-3.png';
+import i4 from '../../public/v-4.png';
+import i5 from '../../public/v-5.png';
+import a1 from '../../public/a-1.png';
+import a2 from '../../public/a-2.png';
+import a3 from '../../public/a-3.png';
+import a4 from '../../public/a-4.png';
+import a5 from '../../public/a-5.png';
+import a6 from '../../public/a-6.png';
+import s1 from '../../public/s-1.png';
+import s2 from '../../public/s-2.png';
+import s3 from '../../public/s-3.png';
+import s4 from '../../public/s-4.png';
+import s5 from '../../public/s-5.png';
+import s6 from '../../public/s-6.png';
+import s7 from '../../public/s-7.png';
+import s8 from '../../public/s-8.png';
 
 export const menuItems = [
   {
@@ -84,12 +131,18 @@ export const projects = [
   {
     href: '/projects/school',
     src: school,
-    desktop: [],
-    mobile: [],
+    showcase: [s1, s2, s3, s4, s5, s6, s7, s8],
     github: 'https://github.com/elassari19/school-system-management',
     live: 'https://ssm.vercel.app/',
     name: 'School System Management - Ongoing',
-    tags: ['Desktop', 'Responsive', 'Side Project', 'Ongoing'],
+    tags: [
+      'Web App',
+      'Responsive',
+      'Full Stack',
+      'Multilingual',
+      'Side Project',
+      'Ongoing',
+    ],
     description:
       'School system management app for managing students, teachers, and courses.',
     technologies: [
@@ -120,7 +173,14 @@ export const projects = [
     github: 'https://github.com/Vocable-AI/vocable_frontend',
     live: 'https://vocable.ai/',
     name: 'Vocable AI',
-    tags: ['Desktop', 'Responsive', 'Client Project', 'Ongoing'],
+    tags: [
+      'Web App',
+      'Responsive',
+      'AI',
+      'Full Stack',
+      'Client Project',
+      'Ongoing',
+    ],
     description:
       "Vocable's platform streamlines your entire content operations, making it easy to ideate, plan, draft, collaborate and optimise multi-channel content in one centralized workflow.",
     technologies: [
@@ -143,10 +203,18 @@ export const projects = [
   {
     href: '/projects/commerce',
     src: commerce,
+    showcase: [e1, e2, e3, e4, e5, e6, e7],
     github: 'https://github.com/elassari19/e-commerce',
     live: 'https://ivf-chat-amber.vercel.app/',
     name: 'E-commerce App',
-    tags: ['Desktop', 'Responsive', 'Side Project', 'Production', '2023'],
+    tags: [
+      'Web App',
+      'Responsive',
+      'Full Stack',
+      'Side Project',
+      'Production',
+      '2023',
+    ],
     description:
       'E-Commerce app with admin dashboard, allows users to browse and purchase products online, with secure payment processing and easy-to-use shopping cart.',
     technologies: [
@@ -174,10 +242,19 @@ export const projects = [
   {
     href: '/projects/ivf',
     src: ivf,
+    showcase: [i1, i2, i3, i4, i5],
     github: 'https://github.com/elassari19/ivf-chat/',
     live: 'https://ivf-chat-amber.vercel.app/',
     name: 'IVF - Chat',
-    tags: ['Desktop', 'Responsive', 'Client Project', 'Ongoing', '2025'],
+    tags: [
+      'Web App',
+      'Responsive',
+      'Full Stack',
+      'AI',
+      'Client Project',
+      'Ongoing',
+      '2025',
+    ],
     description:
       'Real-time chat application for IVF managing mental health and emotional wellbeing during the IVF journey',
     technologies: [
@@ -204,10 +281,18 @@ export const projects = [
   {
     href: '/projects/hunter',
     src: hunter,
+    showcase: [h1, h2, h3, h4, h5, h6, h7],
     github: 'https://github.com/a-hariti/hunter-galloway',
     live: 'https://www.huntergalloway.com.au/',
     name: 'Hunter Galloway',
-    tags: ['Desktop', 'Responsive', 'Client Project', 'Production', '2024'],
+    tags: [
+      'Web App',
+      'Responsive',
+      'Frontend',
+      'Client Project',
+      'Production',
+      '2024',
+    ],
     description: 'Get a home with full guidance and expert assistance',
     technologies: [
       'Built with Next.js, React, and TypeScript for scalability.',
@@ -229,10 +314,18 @@ export const projects = [
   {
     href: '/projects/vacancy',
     src: vacancy,
+    showcase: [t1, t2, t3, t4, t5, t6, t7],
     github: 'https://github.com/elassari19/Ton_vacancy',
     live: 'https://ton-vacancy.vercel.app/',
     name: 'Ton Vacancy',
-    tags: ['Desktop', 'Responsive', 'Side Project', 'Production', '2023'],
+    tags: [
+      'Web App',
+      'Responsive',
+      'Frontend',
+      'Side Project',
+      'Production',
+      '2023',
+    ],
     description:
       'TON work allows you to find the most effective and top employees from all over the world.',
     technologies: [
@@ -258,10 +351,18 @@ export const projects = [
   {
     href: '/projects/atoms',
     src: atoms,
+    showcase: [a1, a2, a3, a4, a5, a6],
     github: 'https://github.com/elassari19/mental-toughness-landing-page',
     live: 'https://atoms.jamesclear.com/',
     name: 'Atoms - Landing Page',
-    tags: ['Desktop', 'Responsive', 'Side Project', 'Production', '2024'],
+    tags: [
+      'Web App',
+      'Responsive',
+      'Frontend',
+      'Side Project',
+      'Production',
+      '2024',
+    ],
     description:
       'Atoms is the definitive habits forming app inspired by the groundbreaking principles of Atomic Habits, the best-selling book by James Clear. Atoms is not only a habit tracker, but also your personal guide filled with bite-sized lessons and insightful strategies to help you make positive changes one small step at a time.',
     technologies: [
@@ -279,10 +380,11 @@ export const projects = [
   {
     href: '/projects/nanoplot',
     src: nanoplot,
+    showcase: [n1, n2, n3, n4, n5, n6, n7],
     github: 'https://github.com/ShanonJackson/nanoplot',
     live: 'https://nanoplot.com/',
     name: 'Nanoplot',
-    tags: ['Desktop', 'Responsive', 'Client Project', 'Ongoing'],
+    tags: ['Web App', 'Responsive', 'Frontend', 'Client Project', 'Ongoing'],
     description:
       'Create stunning data visualizations with ease. Perfect for developers, data scientists, and analysts.',
     technologies: [
