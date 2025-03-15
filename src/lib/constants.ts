@@ -133,7 +133,7 @@ export const projects = [
     src: school,
     showcase: [s1, s2, s3, s4, s5, s6, s7, s8],
     github: 'https://github.com/elassari19/school-system-management',
-    live: 'https://ssm.vercel.app/',
+    live: 'https://schoolsystemmanagement.vercel.app/',
     name: 'School System Management - Ongoing',
     tags: [
       'Web App',
