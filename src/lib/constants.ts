@@ -165,6 +165,17 @@ export const projects = [
       { name: 'Passport.js', url: 'passport' },
       { name: 'Stripe', url: 'stripe' },
     ],
+    challenges: [
+      'Starting from scratch.',
+      'Using Prisma ORM with Express.js.',
+      'Implementing Express.js with Typescript.',
+      'implementing Jest for testing.',
+      'Implementing a multi-language system for the app.',
+      'Implementing Passport for authentication.',
+      'Implementing Stripe for payment processing.',
+      'Implementing Redis for caching.',
+      'Deploy and connect the backend with frontend',
+    ],
   },
   {
     href: '/projects/vocable',
@@ -198,6 +209,12 @@ export const projects = [
       { name: 'Formik', url: 'formik' },
       { name: 'Next-Auth', url: 'auth0' },
       { name: 'Stripe', url: 'stripe' },
+    ],
+    challenges: [
+      'Implementing Stripe for payment processing.',
+      'Implementing Next-Auth for authentication.',
+      'Implementing Redux for state management.',
+      'Working on existing app.',
     ],
   },
   {
@@ -238,6 +255,15 @@ export const projects = [
       { name: 'Cloudinary', url: 'cloudinary' },
       { name: 'Stripe', url: 'stripe' },
     ],
+    challenges: [
+      'Implementing tRPC for API management.',
+      'Using Prisma for database management.',
+      'Implementing Next-Auth for authentication.',
+      'Implementing Stripe for payment processing.',
+      'Implementing Redux for state management.',
+      'Implementing Cloudinary for image storage.',
+      'Implementing Shadcn UI for UI components.',
+    ],
   },
   {
     href: '/projects/ivf',
@@ -261,6 +287,9 @@ export const projects = [
       'Built with Next.js, React, and TypeScript for scalability.',
       'Styled using Tailwind CSS with animations by Framer Motion.',
       'Integrated Supabase (PostgreSQL) and RESTful APIs with Node.js and Express.',
+      'Used React Query for state management.',
+      'Stripe for payment processing.',
+      'AI Chat powered by ChatGPT.',
     ],
     techStack: [
       { name: 'Next.js', url: 'nextdotjs' },
@@ -276,6 +305,13 @@ export const projects = [
       { name: 'Stripe', url: 'stripe' },
       { name: 'Node.js', url: 'nodedotjs' },
       { name: 'Express', url: 'express' },
+    ],
+    challenges: [
+      'Using Drizzele for database management.',
+      'Implementing Next-Auth for authentication.',
+      'Implementing Stripe Subscriptions.',
+      'Implementing React Query for state management.',
+      'Implementing AI Chat powered by ChatGPT.',
     ],
   },
   {
@@ -310,6 +346,11 @@ export const projects = [
       { name: 'Node.js', url: 'nodedotjs' },
       { name: 'Express', url: 'express' },
     ],
+    challenges: [
+      'Using Airtable for database management.',
+      'Implement GSAP animations.',
+      'Implementing Next-Auth for authentication.',
+    ],
   },
   {
     href: '/projects/vacancy',
@@ -336,16 +377,24 @@ export const projects = [
     techStack: [
       { name: 'Next.js', url: 'nextdotjs' },
       { name: 'Bootstrap', url: 'bootstrap' },
-      { name: 'Tailwind CSS', url: 'tailwindcss' },
       { name: 'TypeScript', url: 'typescript' },
       { name: 'Formik', url: 'formik' },
-      { name: 'Framer Motion', url: 'framer' },
       { name: 'Vercel', url: 'vercel' },
-      { name: 'Next-Auth', url: 'auth0' },
       { name: 'Mongoose', url: 'mongoose' },
       { name: 'MongoDB', url: 'mongodb' },
       { name: 'Node.js', url: 'nodedotjs' },
       { name: 'Express', url: 'express' },
+    ],
+    challenges: [
+      'Using Mongoose for database management.',
+      'Implementing Next-Auth for authentication.',
+      'Implementing Bootstrap for UI components.',
+      'Use Multer for file uploads.',
+      'Implement Cloudinary for image storage.',
+      'Implementing express-session and jsonwebtoken for authentication.',
+      'Use Nodemailer for email sending.',
+      'Deploying on Vercel.',
+      'Build app from scratch.',
     ],
   },
   {
@@ -376,6 +425,11 @@ export const projects = [
       { name: 'GSAP', url: 'framer' },
       { name: 'Vercel', url: 'vercel' },
     ],
+    challenges: [
+      'Implementing Tailwind CSS for UI components.',
+      'Implement GSAP animations.',
+      'Deploying on Vercel.',
+    ],
   },
   {
     href: '/projects/nanoplot',
@@ -395,11 +449,16 @@ export const projects = [
       { name: 'Next.js', url: 'nextdotjs' },
       { name: 'Tailwind CSS', url: 'tailwindcss' },
       { name: 'TypeScript', url: 'typescript' },
-      { name: 'Framer Motion', url: 'framer' },
-      { name: 'Vercel', url: 'vercel' },
+    ],
+    challenges: [
+      'Implementing Tailwind CSS for UI components.',
+      'Zero dependencies.',
+      'Work with team members to design and build the app.',
     ],
   },
 ];
+
+export type Project = typeof projects;
 
 export const experiences = [
   {

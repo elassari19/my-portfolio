@@ -153,7 +153,8 @@ export default function AboutPage() {
               </p>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
                 <li>
-                  Learn the organization's overall strategies, business operates
+                  Learn the organization&apos;s overall strategies, business
+                  operates
                 </li>
                 <li>
                   Evaluated and improved existing apps under mentor supervision

@@ -153,10 +153,10 @@ function HeroSection() {
       <div className="w-full md:w-2/3 grid gap-4">
         <AnimatedHero />
         <h2 className="text-xl text-[#666666]">
-          Hi! I'm Hicham El Assari, a proactive full-stack engineer passionate
-          about creating dynamic web experiences. As a full-stack engineer, I
-          create accessible, user-friendly digital experiences that leave a
-          lasting impact.
+          Hi! I&apos;m Hicham El Assari, a proactive full-stack engineer
+          passionate about creating dynamic web experiences. As a full-stack
+          engineer, I create accessible, user-friendly digital experiences that
+          leave a lasting impact.
         </h2>
       </div>
       <div className="w-full md:w-1/2">

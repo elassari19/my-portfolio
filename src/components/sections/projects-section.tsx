@@ -20,7 +20,10 @@ function ProjectsSection() {
       <div className="hidden md:flex flex-col items-center justify-center flex-wrap gap-20">
         <StickyScrollReveal
           left={projects.map((project) => (
-            <div className="col-span-full md:col-span-3 grid gap-6">
+            <div
+              key={project.name}
+              className="col-span-full md:col-span-3 grid gap-6"
+            >
               <Link href={project.href}>
                 <Image
                   className="w-full object-contain"
@@ -50,6 +53,7 @@ function ProjectsSection() {
           ))}
           right={projects.map((project) => (
             <div
+              key={project.name}
               className={cx('col-span-full md:col-span-2 h-full grid gap-4')}
             >
               <div>

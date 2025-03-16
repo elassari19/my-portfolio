@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 interface StickyScrollRevealProps {
   left: React.ReactNode[];
@@ -22,10 +22,10 @@ export const StickyScrollReveal = ({
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -76,8 +76,8 @@ export const StickyScrollReveal = ({
     >
       <div className="flex flex-col md:flex-row w-full">
         {/* Left scrolling content */}
-        <div 
-          ref={leftSectionRef} 
+        <div
+          ref={leftSectionRef}
           className={`w-full ${isMobile ? 'mb-8' : 'md:w-1/2'} relative z-10`}
         >
           {left.map((item, index) => (
@@ -85,13 +85,13 @@ export const StickyScrollReveal = ({
               key={index}
               className="min-h-[50vh] md:min-h-[70vh] flex items-center p-4 md:p-6"
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ 
-                opacity: 1, 
+              whileInView={{
+                opacity: 1,
                 y: 0,
-                transition: { 
+                transition: {
                   duration: 0.5,
-                  delay: isMobile ? 0 : 0.1 
-                }
+                  delay: isMobile ? 0 : 0.1,
+                },
               }}
               viewport={{ once: false, amount: isMobile ? 0.3 : 1 }}
             >
@@ -101,7 +101,7 @@ export const StickyScrollReveal = ({
         </div>
 
         {/* Right sticky content */}
-        <div 
+        <div
           className={`
             w-full md:w-1/2 
             ${isMobile ? 'relative mt-4' : 'sticky top-20 md:top-60'} 
@@ -113,10 +113,14 @@ export const StickyScrollReveal = ({
             <motion.div
               key={index}
               className="absolute inset-0 flex items-center justify-center p-4 md:p-6"
-              initial={{ opacity: 0, x: isMobile ? 0 : 100, y: isMobile ? 50 : 0 }}
+              initial={{
+                opacity: 0,
+                x: isMobile ? 0 : 100,
+                y: isMobile ? 50 : 0,
+              }}
               animate={{
                 opacity: activeIndex === index ? 1 : 0,
-                x: isMobile ? 0 : (activeIndex === index ? 0 : 100),
+                x: isMobile ? 0 : activeIndex === index ? 0 : 100,
                 y: isMobile ? (activeIndex === index ? 0 : 50) : 0,
               }}
               transition={{

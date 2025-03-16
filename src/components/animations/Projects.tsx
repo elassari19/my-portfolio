@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Project } from '../../lib/constants';
 
 const container = {
   hidden: { opacity: 0 },
@@ -17,7 +18,7 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
-export const ProjectGrid = ({ projects }: { projects: any[] }) => {
+export const ProjectGrid = ({ projects }: { projects: Project[] }) => {
   return (
     <motion.div
       variants={container}
@@ -25,8 +26,8 @@ export const ProjectGrid = ({ projects }: { projects: any[] }) => {
       animate="show"
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
     >
-      {projects.map((project) => (
-        <motion.div key={project.id} variants={item}>
+      {projects.map((project, idx) => (
+        <motion.div key={idx} variants={item}>
           {/* Project Card Content */}
         </motion.div>
       ))}
