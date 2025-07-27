@@ -1,4 +1,5 @@
 import ivf from '../../public/ivf.png';
+import glostox from '../../public/g-2.png';
 import hunter from '../../public/hunter.png';
 import commerce from '../../public/commerce.png';
 import vacancy from '../../public/vacancy.png';
@@ -60,6 +61,10 @@ import s5 from '../../public/s-5.png';
 import s6 from '../../public/s-6.png';
 import s7 from '../../public/s-7.png';
 import s8 from '../../public/s-8.png';
+import g1 from '../../public/g-1.png';
+import g2 from '../../public/g-2.png';
+import g3 from '../../public/g-3.png';
+import g4 from '../../public/g-4.png';
 
 export const menuItems = [
   {
@@ -128,6 +133,52 @@ export const techStack = [
 ];
 
 export const projects = [
+  {
+    href: '/projects/glostox',
+    src: glostox,
+    showcase: [g1, g2, g3, g4],
+    github: 'https://github.com/elassari19/glostox-ai-mvp',
+    live: 'https://glostox.com/',
+    name: 'Glostox AI',
+    tags: [
+      'Web App',
+      'MVP',
+      'AI Chatbot',
+      'Full Stack',
+      'Client Project',
+      'Ongoing',
+      '2025',
+    ],
+    description:
+      'Glostox AI is a platform that provides AI-powered chatbots for businesses to enhance customer engagement and support.',
+    technologies: [
+      'Built with Next.js, React, and TypeScript for scalability.',
+      'Styled using Tailwind CSS with animations by Framer Motion.',
+      'Integrated Neon (PostgreSQL) and RESTful APIs with Node.js and Express.',
+      'Used React Query for state management.',
+      'Next-Auth for authentication.',
+      'Stripe for payment processing.',
+      'AI Chat powered by ChatGPT.',
+    ],
+    techStack: [
+      { name: 'Next.js', url: 'nextdotjs' },
+      { name: 'React', url: 'react' },
+      { name: 'TypeScript', url: 'typescript' },
+      { name: 'Tailwind CSS', url: 'tailwindcss' },
+      { name: 'Framer Motion', url: 'framer' },
+      { name: 'Neon', url: 'neon' },
+      { name: 'React Query', url: 'reactquery' },
+      { name: 'ChatGPT', url: 'openai' },
+    ],
+    challenges: [
+      'Implementing Neon for database management.',
+      'Implementing Next-Auth for authentication.',
+      'Implementing React Query for state management.',
+      'Implementing Stripe Subscriptions for payment processing.',
+      'Implementing AI Chat powered by ChatGPT.',
+      'Working on existing app.',
+    ],
+  },
   {
     href: '/projects/school',
     src: school,

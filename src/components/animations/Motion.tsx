@@ -3,7 +3,6 @@
 import React from 'react';
 import {
   AnimatePresence,
-  AnimationControls,
   motion,
   TargetAndTransition,
   Transition,
@@ -13,7 +12,7 @@ import { cx } from 'class-variance-authority';
 
 interface Props extends React.ComponentProps<'div'> {
   initial: TargetAndTransition | VariantLabels;
-  animate: VariantLabels | TargetAndTransition | AnimationControls;
+  animate: VariantLabels | TargetAndTransition;
   exit: TargetAndTransition | VariantLabels;
   transition: Transition;
 }
