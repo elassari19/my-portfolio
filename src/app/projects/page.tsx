@@ -85,7 +85,7 @@ function page() {
               href="/contact"
               className="text-blue-600 hover:text-purple-600 font-semibold transition-colors duration-300"
             >
-              Let's build something amazing together
+              Let&apos;s build something amazing together
             </a>
           </p>
         </motion.div>
