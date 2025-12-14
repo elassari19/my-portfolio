@@ -33,40 +33,36 @@ export const StickyScrollReveal = ({
   useEffect(() => {
     if (leftSectionRef.current) {
       const leftHeight = leftSectionRef.current.scrollHeight;
-      setContainerHeight(leftHeight);
+      // Add extra space to ensure smooth scrolling and proper alignment
+      const itemCount = Math.max(left.length, right.length);
+      const extraHeight = itemCount * 50; // Add 50px per item for better spacing
+      setContainerHeight(leftHeight + extraHeight);
     }
-  }, [left, isMobile]);
+  }, [left, right, isMobile]);
 
   // Track scroll position
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start start', 'end end'],
+    offset: ['start 0.5', 'end 0.8'],
   });
 
   // Update active index based on scroll position
   useEffect(() => {
     const unsubscribe = scrollYProgress.onChange((value) => {
-      if (value < 0.05) {
-        setActiveIndex(0);
-      } else if (value < 0.2) {
-        setActiveIndex(1);
-      } else if (value < 0.37) {
-        setActiveIndex(2);
-      } else if (value < 0.5) {
-        setActiveIndex(3);
-      } else if (value < 0.62) {
-        setActiveIndex(4);
-      } else if (value < 0.74) {
-        setActiveIndex(5);
-      } else if (value < 0.87) {
-        setActiveIndex(6);
-      } else {
-        setActiveIndex(7);
+      const itemCount = Math.max(left.length, right.length);
+      const threshold = 1 / itemCount;
+      
+      for (let i = 0; i < itemCount; i++) {
+        if (value < threshold * (i + 1)) {
+          setActiveIndex(i);
+          return;
+        }
       }
+      setActiveIndex(itemCount - 1);
     });
 
     return () => unsubscribe();
-  }, [scrollYProgress]);
+  }, [scrollYProgress, left.length, right.length]);
 
   return (
     <div
@@ -89,11 +85,12 @@ export const StickyScrollReveal = ({
                 opacity: 1,
                 y: 0,
                 transition: {
-                  duration: 0.5,
-                  delay: isMobile ? 0 : 0.1,
+                  duration: 0.6,
+                  delay: isMobile ? 0 : 0.2,
+                  ease: "easeOut",
                 },
               }}
-              viewport={{ once: false, amount: isMobile ? 0.3 : 1 }}
+              viewport={{ once: false, amount: isMobile ? 0.3 : 0.8 }}
             >
               {item}
             </motion.div>
@@ -124,8 +121,8 @@ export const StickyScrollReveal = ({
                 y: isMobile ? (activeIndex === index ? 0 : 50) : 0,
               }}
               transition={{
-                duration: 0.5,
-                ease: 'easeInOut',
+                duration: 0.6,
+                ease: 'easeOut',
               }}
             >
               {item}
