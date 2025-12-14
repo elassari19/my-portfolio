@@ -17,7 +17,7 @@ interface PageProps {
 
 export default async function ProjectPage({ params }: PageProps) {
   const p = (await params).p;
-  const project: Project[0] = projects.filter(
+  const project: Project = projects.filter(
     (pr) => pr.href.split('/')[2] === p
   )[0];
 
