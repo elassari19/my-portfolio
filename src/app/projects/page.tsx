@@ -3,10 +3,11 @@ import React from 'react';
 import { projects } from '../../lib/constants';
 import ProjectCard from '../../components/shared/ProjectCard';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 function page() {
   return (
-    <div className="relative min-h-screen py-20 overflow-hidden">
+    <div className="relative min-h-screen py-8 mt-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50 opacity-60"></div>
       
@@ -49,24 +50,26 @@ function page() {
               className="group"
             >
               {/* Card container with enhanced styling */}
-              <div className="relative h-full">
-                {/* Background glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                
-                {/* Main card content */}
-                <div className="relative bg-white/70 backdrop-blur-sm border border-slate-200/60 shadow-2xl shadow-slate-900/10 hover:shadow-blue-500/20 group-hover:scale-[1.02] transition-all duration-500 rounded-3xl overflow-hidden h-full">
-                  {/* Decorative top accent */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+              <Link href={project.href} className="block h-full">
+                <div className="relative h-full cursor-pointer">
+                  {/* Background glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500"></div>
                   
-                  {/* Project card content */}
-                  <div className="p-8">
-                    <ProjectCard {...project} />
+                  {/* Main card content */}
+                  <div className="relative bg-white/70 backdrop-blur-sm border border-slate-200/60 shadow-2xl shadow-slate-900/10 hover:shadow-blue-500/20 group-hover:scale-[1.02] transition-all duration-500 rounded-3xl overflow-hidden h-full">
+                    {/* Decorative top accent */}
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+                    
+                    {/* Project card content */}
+                    <div className="p-2 md:p-8">
+                      <ProjectCard {...project} />
+                    </div>
+                    
+                    {/* Hover overlay effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                   </div>
-                  
-                  {/* Hover overlay effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
