@@ -97,16 +97,6 @@ function ContactForm() {
     setStatus({ type: '', message: '' });
   };
 
-  const copyToClipboard = (text: string, type: string) => {
-    navigator.clipboard.writeText(text).then(() => {
-      setStatus({ 
-        type: 'success', 
-        message: `${type} copied to clipboard!` 
-      });
-      setTimeout(() => setStatus({ type: '', message: '' }), 2000);
-    });
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -343,7 +333,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed"
           >
-            Have a project in mind or want to collaborate? Let's connect and build something amazing together.
+            Have a project in mind or want to collaborate? Let&apos;s connect and build something amazing together.
           </motion.p>
         </motion.div>
 

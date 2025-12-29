@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { BookOpenIcon, GithubIcon, ArrowLeft } from 'lucide-react';
 import TechnologyIcon from '@/components/shared/technology-icon';
-import { Button } from '../../../components/ui/button';
 import ShowcaseCarousel from '../../../components/shared/ShowcaseCarousel';
 import Motion from '../../../components/animations/Motion';
 

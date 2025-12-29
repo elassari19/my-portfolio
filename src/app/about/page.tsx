@@ -503,7 +503,7 @@ export default function AboutPage() {
               Ready to Build Something Amazing?
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-2xl mx-auto">
-              Let's collaborate on your next project. I bring experience, creativity, 
+              Let&apos;s collaborate on your next project. I bring experience, creativity, 
               and a commitment to excellence.
             </p>
             <a 

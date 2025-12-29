@@ -3,7 +3,6 @@ import React from 'react';
 import { projects } from '../../lib/constants';
 import ProjectCard from '../../components/shared/ProjectCard';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 function page() {
   return (
