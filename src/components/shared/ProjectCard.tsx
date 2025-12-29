@@ -26,26 +26,47 @@ function ProjectCard({
   github,
   live,
 }: IProps) {
+  // Ensure URLs are properly formatted
+  const cleanHref = href.startsWith('/') ? href : `/${href}`;
+  const cleanGithub = github.startsWith('http') ? github : `https://${github}`;
+  const cleanLive = live.startsWith('http') ? live : `https://${live}`;
+
   return (
     <div className={cx('p-2 md:p-6 rounded-xl shadow-2xl')}>
       <div className="grid grid-cols-1 md:grid-cols-5 items-start justify-center gap-8 text-start h-full w-full  overflow-hidden rounded-2xl">
         <div className="col-span-full md:col-span-3 grid gap-6">
-          <Link href={href}>
-            <Image className="w-full object-contain" src={src} alt="project" />
+          {/* Internal project link */}
+          <Link 
+            href={cleanHref}
+            className="block hover:opacity-90 transition-opacity outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg z-10 relative"
+            aria-label={`View ${name} project details`}
+          >
+            <Image 
+              className="w-full object-contain" 
+              src={src} 
+              alt={`${name} project screenshot`} 
+              priority={false}
+            />
           </Link>
+          
+          {/* Action buttons */}
           <div className="px-2 flex gap-4 justify-between items-center">
             <Link
-              href={github}
+              href={cleanGithub}
               target="_blank"
-              className="border rounded-lg p-2 px-4 flex gap-2 items-center"
+              rel="noopener noreferrer"
+              className="border rounded-lg p-2 px-4 flex gap-2 items-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              aria-label={`View ${name} source code on GitHub`}
             >
               <GithubIcon className="w-5 h-5" />
               <span>Code</span>
             </Link>
             <Link
-              href={live}
+              href={cleanLive}
               target="_blank"
-              className="border rounded-lg p-2 px-4 flex gap-2 items-center"
+              rel="noopener noreferrer"
+              className="border rounded-lg p-2 px-4 flex gap-2 items-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              aria-label={`View ${name} live demo`}
             >
               <BookOpenIcon className="w-5 h-5" />
               <span>Live</span>

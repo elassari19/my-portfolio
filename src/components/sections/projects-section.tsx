@@ -19,38 +19,57 @@ function ProjectsSection() {
       </h3>
       <div className="hidden md:flex flex-col items-center justify-center flex-wrap gap-20">
         <StickyScrollReveal
-          left={projects.map((project) => (
-            <div
-              key={project.name}
-              className="col-span-full md:col-span-3 grid gap-6"
-            >
-              <Link href={project.href}>
-                <Image
-                  className="w-full object-contain"
-                  src={project.src}
-                  alt="project"
-                />
-              </Link>
-              <div className="px-2 flex gap-4 justify-between items-center">
-                <Link
-                  href={project.github}
-                  target="_blank"
-                  className="border rounded-lg p-2 px-4 flex gap-2 items-center"
+          left={projects.map((project) => {
+            // Debug log - only in development
+            if (process.env.NODE_ENV === 'development') {
+              console.log(`ProjectsSection - ${project.name}:`, { 
+                href: project.href, 
+                github: project.github, 
+                live: project.live 
+              });
+            }
+            
+            return (
+              <div
+                key={project.name}
+                className="col-span-full md:col-span-3 grid gap-6"
+              >
+                <Link 
+                  href={project.href}
+                  className="block hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg z-10 relative"
+                  aria-label={`View ${project.name} project details`}
                 >
-                  <GithubIcon className="w-5 h-5" />
-                  <span>Code</span>
+                  <Image
+                    className="w-full object-contain"
+                    src={project.src}
+                    alt={`${project.name} project screenshot`}
+                  />
                 </Link>
-                <Link
-                  href={project.live}
-                  target="_blank"
-                  className="border rounded-lg p-2 px-4 flex gap-2 items-center"
-                >
-                  <BookOpenIcon className="w-5 h-5" />
-                  <span>Live</span>
-                </Link>
+                <div className="px-2 flex gap-4 justify-between items-center">
+                  <Link
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border rounded-lg p-2 px-4 flex gap-2 items-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    aria-label={`View ${project.name} source code on GitHub`}
+                  >
+                    <GithubIcon className="w-5 h-5" />
+                    <span>Code</span>
+                  </Link>
+                  <Link
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border rounded-lg p-2 px-4 flex gap-2 items-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    aria-label={`View ${project.name} live demo`}
+                  >
+                    <BookOpenIcon className="w-5 h-5" />
+                    <span>Live</span>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
           right={projects.map((project) => (
             <div
               key={project.name}

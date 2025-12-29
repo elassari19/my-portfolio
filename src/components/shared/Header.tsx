@@ -33,7 +33,11 @@ export const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:hidden">
-          <Link href="/" className="flex items-center gap-2">
+          <Link 
+            href="/" 
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity outline-none rounded-lg"
+            aria-label="Home"
+          >
             <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center">
               <span className="text-xl">👨</span>
             </div>
@@ -47,12 +51,13 @@ export const Header = () => {
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px] bg-background/95 backdrop-blur-lg">
-              <nav className="grid gap-4">
+              <nav className="grid gap-4" role="navigation" aria-label="Mobile navigation">
                 {menuItems.map((item, index) => (
                   <Link
                     key={index}
                     href={item.href}
-                    className="flex items-start gap-2 p-3 rounded-lg hover:bg-muted transition-colors"
+                    className="flex items-start gap-2 p-3 rounded-lg hover:bg-muted transition-all duration-200 outline-none active:scale-95"
+                    aria-label={`${item.title}: ${item.description}`}
                   >
                     <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <span className="text-2xl">{item.icon}</span>
@@ -78,12 +83,13 @@ export const Header = () => {
         color={'#ff00e5'}
         borderRadius={100}
       >
-        <div className="hidden md:flex items-center gap-0 px-2">
+        <div className="hidden md:flex items-center gap-0 px-2 pointer-events-auto">
           {menuItems.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="flex items-center gap-2 p-2 rounded-lg hover:bg-muted transition-colors"
+              className="flex items-center gap-2 p-2 rounded-lg hover:bg-muted hover:scale-105 transition-all duration-200 outline-none"
+              aria-label={`Navigate to ${item.title}`}
             >
               <div className="w-6 h-6 rounded-lg bg-muted flex items-center justify-center">
                 <span className="text-sm">{item.icon}</span>
