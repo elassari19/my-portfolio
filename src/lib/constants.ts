@@ -268,7 +268,7 @@ export const projects: Project[] = [
     showcase: [aldomakers, aldomakers1, aldomakers2, aldomakers6, aldomakers3, aldomakers4, aldomakers5],
     github: 'https://github.com/elassari19',
     live: 'https://algomakers.ai/',
-    name: 'Aldomakers AI',
+    name: 'Algomakers AI',
     tags: [
       'Web Application',
       'MVP',
@@ -700,9 +700,21 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     title: 'Full-Stack Developer',
+    company: 'Algomakers AI',
+    location: 'Remote • Freelance',
+    period: '2025/07 – Present',
+    responsibilities: [
+      'Architect and develop AI-powered strategy marketplace platform using Next.js, React, and TypeScript',
+      'Implement scalable PostgreSQL database with Prisma ORM and Redis caching',
+      'Integrate secure authentication with Next-Auth and cryptocurrency payments via NowPayments',
+      'Deploy and manage infrastructure on Hezner Cloud for optimal performance',
+    ],
+  },
+  {
+    title: 'Full-Stack Developer',
     company: 'Coral',
     location: 'Remote • Freelance',
-    period: '2023/08 – Present',
+    period: '2023/08 – 2024/01',
     responsibilities: [
       'Architect end-to-end solutions from concept to deployment, delivering scalable applications with modern tech stacks',
       'Collaborate with cross-functional teams to enhance existing web applications with new features and functionality',
