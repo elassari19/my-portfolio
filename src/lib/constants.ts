@@ -96,6 +96,21 @@ import g2 from '../../public/g-2.png';
 import g3 from '../../public/g-3.png';
 import g4 from '../../public/g-4.png';
 
+// Appointment Manager gallery
+import app1 from '../../public/appointment-1.png';
+import app2 from '../../public/appointment-2.png';
+import app3 from '../../public/appointment-3.png';
+import app4 from '../../public/appointment-4.png';
+import app5 from '../../public/appointment-5.png';
+import app6 from '../../public/appointment-6.png';
+import app7 from '../../public/appointment-7.png';
+import app8 from '../../public/appointment-8.png';
+import app9 from '../../public/appointment-9.png';
+import app10 from '../../public/appointment-10.png';
+import app11 from '../../public/appointment-11.png';
+import app12 from '../../public/appointment-12.png';
+import app13 from '../../public/appointment-13.png';
+
 export interface MenuItem {
   icon: string;
   title: string;
@@ -150,30 +165,30 @@ export const techStack: Technology[] = [
   { name: 'React', url: 'react' },
   { name: 'Next.js', url: 'nextdotjs' },
   { name: 'Tailwind CSS', url: 'tailwindcss' },
-  
+
   // State Management
   { name: 'Redux Toolkit', url: 'redux' },
   { name: 'Zustand', url: 'redux/pink' },
   { name: 'React Query', url: 'reactquery' },
-  
+
   // UI Frameworks
   { name: 'Shadcn/ui', url: 'shadcnui' },
   { name: 'MUI', url: 'MUI' },
-  
+
   // Backend Technologies
   { name: 'Node.js', url: 'nodedotjs' },
   { name: 'Express', url: 'express' },
   { name: 'GraphQL', url: 'graphql' },
-  
+
   // Databases
   { name: 'MongoDB', url: 'mongodb' },
   { name: 'MySQL', url: 'mysql' },
   { name: 'PostgreSQL', url: 'postgresql' },
-  
+
   // ORMs
   { name: 'Prisma', url: 'prisma' },
   { name: 'Drizzle', url: 'drizzle' },
-  
+
   // Version Control & Deployment
   { name: 'Git', url: 'git' },
   { name: 'GitHub', url: 'github' },
@@ -196,6 +211,57 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    href: '/projects/appointment',
+    src: app1,
+    showcase: [app1, app2, app3, app4, app5, app6, app7, app8, app9, app10, app11, app12, app13],
+    github: 'https://github.com/elassari19/appointment',
+    live: 'https://appointment-umber-rho.vercel.app',
+    name: 'Appointment Manager',
+    tags: [
+      'Web Application',
+      'Responsive Design',
+      'Full Stack',
+      'Side Project',
+      'Production',
+      '2025',
+    ],
+    description:
+      'A comprehensive appointment scheduling and management system with admin dashboard, featuring multi-language support and secure payment processing.',
+    technologies: [
+      'Architected scalable full-stack application with Next.js, React, and TypeScript',
+      'Designed responsive interfaces using Tailwind CSS and Shadcn/ui components',
+      'Implemented robust backend with Node.js, Express, and TypeORM',
+      'Configured PostgreSQL database with TypeORM for type-safe operations',
+      'Integrated secure authentication system using Next-Auth',
+      'Implemented Stripe payment gateway for subscription management',
+      'Added internationalization support with next-intl (Arabic & English)',
+      'Developed comprehensive admin dashboard for appointment management',
+    ],
+    techStack: [
+      { name: 'Next.js', url: 'nextdotjs' },
+      { name: 'React', url: 'react' },
+      { name: 'TypeScript', url: 'typescript' },
+      { name: 'Tailwind CSS', url: 'tailwindcss' },
+      { name: 'Shadcn UI', url: 'shadcnui' },
+      { name: 'Node.js', url: 'nodedotjs' },
+      { name: 'Express', url: 'express' },
+      { name: 'TypeORM', url: 'typeorm' },
+      { name: 'PostgreSQL', url: 'postgresql' },
+      { name: 'Next-Auth', url: 'auth0' },
+      { name: 'Stripe', url: 'stripe' },
+      { name: 'next-intl', url: 'nextjs' },
+    ],
+    challenges: [
+      'Architected complete full-stack appointment scheduling system',
+      'Implemented TypeORM with PostgreSQL for robust data management',
+      'Configured Next-Auth for secure multi-provider authentication',
+      'Integrated Stripe payment gateway for subscription handling',
+      'Developed comprehensive admin dashboard functionality',
+      'Implemented full internationalization (Arabic & English)',
+      'Designed responsive UI with Shadcn/ui components',
+    ],
+  },
   {
     href: '/projects/algomakers-ai',
     src: aldomakers,
